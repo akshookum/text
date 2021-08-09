@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper div,
+.wrapper-2 div {
+  padding: 10px 15px;
+  background-color: fuchsia;
+  border: 1px solid #333;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 100px 1fr 100px;
+
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "aside footer";
+}
+
+header,
+aside,
+main,
+footer {
+  padding: 2em;
+  background-color: fuchsia;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: aside;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
